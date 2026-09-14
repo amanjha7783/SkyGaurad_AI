@@ -1,0 +1,19 @@
+{
+    "total_rows": 1000,
+    "injected_rows": 151,
+    "events_injected": {
+        "SPIKE": 2,
+        "FROZEN_SENSOR": 2,
+        "DRIFT": 0,
+        "OFFSET": 0,
+        "MISSING_DATA": 5,
+        "COMMUNICATION_ERROR": 4,
+        "PRESSURE_ANOMALY": 5,
+        "HUMIDITY_SENSOR_FAILURE": 4,
+        "TEMPORAL_ANOMALY": 2,
+        "MULTIVARIATE_INCONSISTENCY": 3,
+        "MULTI_SENSOR_FAILURE": 1,
+        "INTERMITTENT_FAILURE": 5,
+        "REAL_WEATHER_EVENT": 1
+    }
+}

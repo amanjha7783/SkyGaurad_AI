@@ -1,0 +1,32 @@
+# Database Configuration
+database:
+  host: localhost
+  port: 5432
+  user: skyguard_user
+  password: secure_password
+  dbname: skyguard_db
+
+# Machine Learning Configuration
+ml:
+  random_seed: 42
+  models_path: ./ml/models
+  preprocessing:
+    scaler: standard
+  
+# API Configuration
+api:
+  host: 0.0.0.0
+  port: 8000
+  debug: true
+
+# Sensor Configuration
+sensors:
+  temperature:
+    min_valid: -50
+    max_valid: 60
+  humidity:
+    min_valid: 0
+    max_valid: 100
+  pressure:
+    min_valid: 800
+    max_valid: 1100

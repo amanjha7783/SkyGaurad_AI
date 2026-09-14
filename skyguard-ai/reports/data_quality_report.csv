@@ -1,0 +1,9 @@
+timestamp,station_id,quarantine_reasons
+2023-01-01 02:00:00,STN001,invalid_temperature
+2023-01-01 03:00:00,STN001,invalid_temperature
+2023-01-01 04:00:00,STN001,invalid_pressure
+2023-01-01 05:00:00,STN001,invalid_humidity
+2023-01-01 06:00:00,STN001,missing_required_value
+2023-01-01 07:00:00,,missing_required_value|invalid_station_metadata
+2023-01-01 08:00:00,STN001,duplicate_record
+2023-01-01 08:00:00,STN001,duplicate_record

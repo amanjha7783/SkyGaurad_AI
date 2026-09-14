@@ -1,0 +1,20 @@
+{
+    "input_rows": 10,
+    "clean_rows": 2,
+    "quarantined_rows": 8,
+    "missing_values_flagged": 2,
+    "duplicates_flagged": 2,
+    "invalid_temp_flagged": 2,
+    "invalid_pressure_flagged": 1,
+    "invalid_humidity_flagged": 1,
+    "invalid_station_flagged": 1,
+    "sampling_frequency": {
+        "STN001": {
+            "mean_interval_sec": 3600.0,
+            "median_interval_sec": 3600.0,
+            "min_interval_sec": 3600.0,
+            "max_interval_sec": 3600.0,
+            "most_common_sec": 3600.0
+        }
+    }
+}

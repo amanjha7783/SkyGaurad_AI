@@ -1,0 +1,51 @@
+random_seed: 42
+anomaly_percentage: 0.15
+
+# Global anomaly definitions
+anomaly_classes:
+  SPIKE:
+    duration_range: [1, 2]
+    magnitude_range: [5.0, 15.0]
+    affected_parameters: ["temperature_c", "pressure_hpa", "relative_humidity_pct"]
+  FROZEN_SENSOR:
+    duration_range: [4, 10]
+    affected_parameters: ["temperature_c", "pressure_hpa", "relative_humidity_pct"]
+  DRIFT:
+    duration_range: [5, 12]
+    magnitude_range: [0.5, 2.0] # Drift per time step
+    affected_parameters: ["temperature_c"]
+  OFFSET:
+    duration_range: [5, 12]
+    magnitude_range: [5.0, 10.0]
+    affected_parameters: ["pressure_hpa", "temperature_c"]
+  MISSING_DATA:
+    duration_range: [1, 5]
+    affected_parameters: ["temperature_c", "pressure_hpa", "relative_humidity_pct"]
+  COMMUNICATION_ERROR:
+    duration_range: [2, 6]
+    affected_parameters: ["ALL"]
+  PRESSURE_ANOMALY:
+    duration_range: [1, 3]
+    magnitude_range: [15.0, 30.0]
+    affected_parameters: ["pressure_hpa"]
+  HUMIDITY_SENSOR_FAILURE:
+    duration_range: [3, 8]
+    value: 0.0 # Stuck at 0
+    affected_parameters: ["relative_humidity_pct"]
+  TEMPORAL_ANOMALY:
+    duration_range: [2, 4]
+    affected_parameters: ["temperature_c"]
+  MULTIVARIATE_INCONSISTENCY:
+    duration_range: [3, 6]
+    affected_parameters: ["temperature_c", "relative_humidity_pct"]
+  MULTI_SENSOR_FAILURE:
+    duration_range: [2, 5]
+    affected_parameters: ["ALL"]
+  INTERMITTENT_FAILURE:
+    duration_range: [4, 8]
+    magnitude_range: [10.0, 20.0]
+    affected_parameters: ["temperature_c"]
+  REAL_WEATHER_EVENT:
+    duration_range: [3, 8]
+    magnitude_range: [3.0, 8.0]
+    affected_parameters: ["temperature_c", "pressure_hpa"]

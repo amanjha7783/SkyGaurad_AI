@@ -1,0 +1,47 @@
+{
+    "splits": {
+        "train": {
+            "accuracy": 0.9114285714285715,
+            "precision": 0.6990291262135923,
+            "recall": 0.6990291262135923,
+            "f1_score": 0.6990291262135923,
+            "false_positive_rate": 0.051926298157453935,
+            "false_negative_rate": 0.30097087378640774
+        },
+        "val": {
+            "accuracy": 0.8466666666666667,
+            "precision": 0.5490196078431373,
+            "recall": 1.0,
+            "f1_score": 0.7088607594936709,
+            "false_positive_rate": 0.1885245901639344,
+            "false_negative_rate": 0.0
+        },
+        "test": {
+            "accuracy": 0.8533333333333334,
+            "precision": 0.3888888888888889,
+            "recall": 1.0,
+            "f1_score": 0.56,
+            "false_positive_rate": 0.16176470588235295,
+            "false_negative_rate": 0.0
+        }
+    },
+    "severity": {
+        "MEDIUM": {
+            "recall": 1.0,
+            "support": 1
+        },
+        "HIGH": {
+            "recall": 1.0,
+            "support": 25
+        },
+        "CRITICAL": {
+            "recall": 1.0,
+            "support": 16
+        }
+    },
+    "latency": {
+        "mean_latency_rows": 0.0,
+        "median_latency_rows": 0.0,
+        "detected_events_ratio": 1.0
+    }
+}

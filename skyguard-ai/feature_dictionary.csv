@@ -1,0 +1,44 @@
+Feature Name,Description,Type,Leakage Safe
+timestamp,Observation time in UTC,datetime,Yes
+station_id,Unique identifier for the weather station,string,Yes
+temperature_c,Current air temperature reading in Celsius,float,Yes
+pressure_hpa,Current barometric pressure reading in hPa,float,Yes
+relative_humidity_pct,Current relative humidity reading in percent,float,Yes
+temperature_c_is_missing,Boolean flag indicating missing temperature reading,integer,Yes
+pressure_hpa_is_missing,Boolean flag indicating missing pressure reading,integer,Yes
+relative_humidity_pct_is_missing,Boolean flag indicating missing humidity reading,integer,Yes
+hour_sin,Sine of the hour (captures diurnal cycle),float,Yes
+hour_cos,Cosine of the hour (captures diurnal cycle),float,Yes
+day_of_year_sin,Sine of the day of year (captures seasonal cycle),float,Yes
+day_of_year_cos,Cosine of the day of year (captures seasonal cycle),float,Yes
+rolling_temperature_mean_1h,Rolling mean temperature over the past 1 hour for this station,float,Yes
+rolling_temperature_std_1h,Rolling standard deviation of temperature over the past 1 hour for this station,float,Yes
+rolling_pressure_mean_1h,Rolling mean pressure over the past 1 hour for this station,float,Yes
+rolling_pressure_std_1h,Rolling standard deviation of pressure over the past 1 hour for this station,float,Yes
+rolling_humidity_mean_1h,Rolling mean humidity over the past 1 hour for this station,float,Yes
+rolling_humidity_std_1h,Rolling standard deviation of humidity over the past 1 hour for this station,float,Yes
+rolling_temperature_mean_3h,Rolling mean temperature over the past 3 hours for this station,float,Yes
+rolling_temperature_std_3h,Rolling standard deviation of temperature over the past 3 hours for this station,float,Yes
+rolling_pressure_mean_3h,Rolling mean pressure over the past 3 hours for this station,float,Yes
+rolling_pressure_std_3h,Rolling standard deviation of pressure over the past 3 hours for this station,float,Yes
+rolling_humidity_mean_3h,Rolling mean humidity over the past 3 hours for this station,float,Yes
+rolling_humidity_std_3h,Rolling standard deviation of humidity over the past 3 hours for this station,float,Yes
+temperature_zscore,Standardized score using the 3-hour rolling mean and std,float,Yes
+pressure_zscore,Standardized score using the 3-hour rolling mean and std,float,Yes
+humidity_zscore,Standardized score using the 3-hour rolling mean and std,float,Yes
+temperature_delta,Difference between current and previous temperature reading,float,Yes
+pressure_delta,Difference between current and previous pressure reading,float,Yes
+humidity_delta,Difference between current and previous humidity reading,float,Yes
+temperature_c_lag_1,Temperature reading from 1 time-step prior,float,Yes
+temperature_c_lag_2,Temperature reading from 2 time-steps prior,float,Yes
+pressure_hpa_lag_1,Pressure reading from 1 time-step prior,float,Yes
+pressure_hpa_lag_2,Pressure reading from 2 time-steps prior,float,Yes
+relative_humidity_pct_lag_1,Humidity reading from 1 time-step prior,float,Yes
+relative_humidity_pct_lag_2,Humidity reading from 2 time-steps prior,float,Yes
+temperature_persistence,Consecutive count of identical temperature readings,integer,Yes
+pressure_persistence,Consecutive count of identical pressure readings,integer,Yes
+humidity_persistence,Consecutive count of identical humidity readings,integer,Yes
+neighbor_temperature_difference,Difference between this station and the mean of all other stations at this timestamp,float,Yes
+neighbor_pressure_difference,Difference between this station and the mean of all other stations at this timestamp,float,Yes
+neighbor_humidity_difference,Difference between this station and the mean of all other stations at this timestamp,float,Yes
+is_anomaly,Target variable: 1 if synthetic anomaly else 0,integer,N/A

@@ -1,0 +1,54 @@
+schema:
+  timestamp:
+    aliases: ["time", "date", "datetime", "obs_time"]
+    type: datetime
+  station_id:
+    aliases: ["id", "stn_id", "station"]
+    type: string
+  station_name:
+    aliases: ["name", "stn_name", "location"]
+    type: string
+  city:
+    aliases: []
+    type: string
+  state:
+    aliases: ["province"]
+    type: string
+  latitude:
+    aliases: ["lat"]
+    type: float
+  longitude:
+    aliases: ["lon", "lng"]
+    type: float
+  altitude_m:
+    aliases: ["alt", "elevation", "elev"]
+    type: float
+  temperature_c:
+    aliases: ["temp", "temperature", "t_c", "temp_c"]
+    type: float
+  pressure_hpa:
+    aliases: ["pressure", "pres", "p_hpa", "slp"]
+    type: float
+  relative_humidity_pct:
+    aliases: ["humidity", "rh", "rh_pct", "rel_hum"]
+    type: float
+  source:
+    aliases: []
+    type: string
+
+validation:
+  temperature_c:
+    min: -50
+    max: 60
+  pressure_hpa:
+    min: 800
+    max: 1100
+  relative_humidity_pct:
+    min: 0
+    max: 100
+  latitude:
+    min: -90
+    max: 90
+  longitude:
+    min: -180
+    max: 180

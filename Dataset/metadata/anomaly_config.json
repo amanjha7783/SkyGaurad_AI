@@ -1,7 +1,0 @@
-{
-  "random_seed": 42,
-  "baseline_status": "REAL OBSERVATIONS FROM PROVIDED FILE \u2014 NOT FABRICATED",
-  "injection_status": "CONTROLLED FAULTS ADDED ONLY TO anomaly_injected_aws.csv",
-  "source": "NOAA / NWS ASOS Network via IEM Archive, as stated in supplied metadata",
-  "note": "The supplied file covers 2025-01-01 through 2025-01-06, not six months."
-}

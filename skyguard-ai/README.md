@@ -99,3 +99,19 @@ Outputs are safely generated in the esults/ directory without mutating the raw 
 
 *Note: Because the official 	est.csv contains exclusively negative samples (normal weather), the Precision and Recall metrics for the Anomaly class yield 0.0, which accurately reflects the lack of true positive anomalies available for detection in the test split.*
 
+
+
+## Live Weather API Integration
+
+The src/anomaly_detection/ module is explicitly designed to retrieve CURRENT live weather data and evaluate it against the models trained strictly on historical datasets.
+
+### Setup
+1. Copy .env.example to .env.
+2. Populate WEATHER_API_KEY with a valid OpenWeatherMap API key.
+3. (Optional) Adjust LATITUDE and LONGITUDE.
+
+### Running Live Detection
+Execute the real-time detection script:
+python src/anomaly_detection/realtime_detection.py`n
+The script will independently map the raw live data to the trained feature shape, transform it securely using models/saved/imputer.pkl, and output a live anomaly detection classification using the fitted IsolationForest. Note: The API script NEVER alters or modifies the underlying 	rain.csv source of truth.
+

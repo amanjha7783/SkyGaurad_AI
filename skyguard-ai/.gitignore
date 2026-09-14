@@ -76,3 +76,6 @@ data/raw/*
 data/processed/*
 data/anomaly/*
 !data/sample/*
+
+.env
+

@@ -66,3 +66,36 @@ Navigate to `http://localhost:5173/alerts` to watch the control center react in 
 - `ml/`: Model training scripts, feature engineering, spatial distance matrix cache.
 - `data/`: CSV datasets and synthetic injection scripts.
 - `scripts/`: System evaluation and demo replay utilities.
+
+
+## Official Dataset & Training Methodology
+
+### Dataset Lineage
+The official dataset files used for model training and evaluation are sourced exactly from the provided workspace and integrated into the data/raw/ directory:
+- 	rain.csv (1339 rows)
+- alidation.csv (297 rows)
+- 	est.csv (286 rows)
+
+**Target Label:** is_anomaly`n**Feature Columns:** temperature_c, pressure_hpa, relative_humidity_pct, and various temporal/spatial deltas.
+
+### Preprocessing & Leakage Prevention
+Data leakage is strictly prevented by:
+1. Fitting StandardScaler and SimpleImputer exclusively on 	rain.csv.
+2. Saving these stateful transformers to models/saved/.
+3. Transforming alidation.csv and 	est.csv using the pre-fitted components.
+
+### Models & Evaluation
+We employ two independent anomaly detectors to form a robust ensemble:
+- **Isolation Forest**: Evaluates local numerical spikes and multidimensional outliers.
+- **Autoencoder (MLPRegressor Bottleneck)**: Learns the identity function of normal weather data and detects anomalies based on high reconstruction error.
+
+**Commands:**
+- Train Models: python src/training/train.py`n- Evaluate Models: python src/evaluation/evaluate.py`n
+**Evaluation Outputs:**
+Outputs are safely generated in the esults/ directory without mutating the raw CSV files:
+- esults/metrics/*.json: Accuracy, Precision, Recall, F1, Anomaly Rate.
+- esults/predictions/*.csv: Raw boolean inference predictions.
+- esults/plots/confusion_matrix/: Heatmaps detailing FP/TN metrics.
+
+*Note: Because the official 	est.csv contains exclusively negative samples (normal weather), the Precision and Recall metrics for the Anomaly class yield 0.0, which accurately reflects the lack of true positive anomalies available for detection in the test split.*
+

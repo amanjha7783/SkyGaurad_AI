@@ -1,0 +1,30 @@
+{
+    "validation": {
+        "accuracy": 0.9932659932659933,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "anomaly_detection_rate": 0.006734006734006734,
+        "detected_anomalies": 2,
+        "confusion_matrix": {
+            "TN": 295,
+            "FP": 2,
+            "FN": 0,
+            "TP": 0
+        }
+    },
+    "test": {
+        "accuracy": 0.9825174825174825,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "anomaly_detection_rate": 0.017482517482517484,
+        "detected_anomalies": 5,
+        "confusion_matrix": {
+            "TN": 281,
+            "FP": 5,
+            "FN": 0,
+            "TP": 0
+        }
+    }
+}

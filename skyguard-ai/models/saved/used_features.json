@@ -1,0 +1,1 @@
+["temperature_c", "pressure_hpa", "relative_humidity_pct", "temperature_rate_change", "pressure_rate_change", "humidity_rate_change", "distance_to_nearest_station_km", "neighbor_temperature_difference", "neighbor_pressure_difference", "neighbor_humidity_difference", "sensor_health_score"]
